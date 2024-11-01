@@ -1,4 +1,4 @@
-<svg width="70" height="70" viewBox="-35 -35 70 70" xmlns="http://www.w3.org/2000/svg">
+<svg width="76" height="70" viewBox="-38 -35 76 70" xmlns="http://www.w3.org/2000/svg">
     <g transform="scale(0.1)">
     <clipPath id="clipBox">
         <path d="m0,212 h-74 v138 h-276 v-700 h700 v700 h-276 v-138 z" />
@@ -10,7 +10,7 @@
         <path d="m0,-200 h50 v-150 h300 v700 h-700 v-700 h300 v150 z" />
     </clipPath>
     <g clip-path="url(#clipBox)">
-        <g fill="none" stroke="white" stroke-width="100" transform="rotate(-45 0 0)">
+        <g fill="none" stroke="whitesmoke" stroke-width="100" transform="rotate(-45 0 0)">
             <path id="qCircle" d="M-300,300 v-300 a300,300,270,1,1,300,300 z" clip-path="url(#clipCircle)" />
             <path id="qStroke" d="M300,0 h-800" clip-path="url(#clipStroke)" />
         </g>
