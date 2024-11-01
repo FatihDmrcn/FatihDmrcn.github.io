@@ -1,0 +1,1 @@
+import{a as t,t as a}from"../chunks/disclose-version.DROC4CfW.js";import{$ as r,n}from"../chunks/runtime.BU2of-zK.js";import{h as m}from"../chunks/svelte-head.BIQ_WN50.js";var p=a("<h1>Welcome</h1> <dev>Content for this page will be provided soon.</dev>",1);function c(o){var e=p();m(i=>{r.title="FatihDmrcn"}),n(2),t(o,e)}export{c as component};
