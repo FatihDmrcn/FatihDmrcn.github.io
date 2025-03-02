@@ -23,12 +23,11 @@
         p2 = (percentage * length - idx) * 100;
         c1 = colors[idx];
         c2 = idx == length ? colors[0] : colors[idx + 1];
-        console.log(pos);
     }
 </script>
 
 <main
-    class="flex flex-col h-svh w-svw relative items-center font-mono"
+    class="flex flex-col h-dvh w-dvw relative items-center"
     style="background-color: color-mix(in srgb, {c1}, {c2} {p2}%);"
 >
     <div
@@ -40,7 +39,7 @@
     </div>
     <div
         onscroll={scroll_color}
-        class="flex-1 max-w-3xl carousel carousel-vertical text-xl"
+        class="flex-1 max-w-3xl carousel carousel-vertical"
     >
         {@render children()}
     </div>

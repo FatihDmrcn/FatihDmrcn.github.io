@@ -5,7 +5,7 @@
 
 <li class="list-row">
     <svg
-        class="fill-base-content size-9"
+        class="fill-base-content size-7 sm:size-9"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 -960 960 960"
     >

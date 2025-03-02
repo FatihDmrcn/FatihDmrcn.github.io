@@ -1,5 +1,7 @@
 <script lang="ts">
+    import { scroll_pos } from "$lib";
     import PageContainer from "$lib/components/page_container.svelte";
+    import CardContainer from "$lib/components/card_container.svelte";
     import BtnCarousel from "$lib/components/btn_carousel.svelte";
 
     import profile from "$lib/fig/profile.jpg";
@@ -7,6 +9,9 @@
     import rust from "$lib/fig/rust_logo.svg";
     import python from "$lib/fig/python_logo.svg";
     import LiAcademia from "$lib/components/li_academia.svelte";
+
+    const len_01 = 2;
+    let pos_01 = $state(1);
 </script>
 
 <svelte:head>
@@ -14,47 +19,51 @@
 </svelte:head>
 
 <PageContainer id={"about_me"}>
-    <div class="flex-1 carousel w-full items-center">
-        <div id="about_me_1" class="carousel-item w-full flex-col">
-            <div class="flex-1">
-                <div class="avatar float-none sm:float-right">
-                    <div class="mask mask-hexagon w-36 sm:w-48">
-                        <img class="" src={profile} alt="profile" />
-                    </div>
+    <div
+        class="flex-1 carousel w-full items-center"
+        onscroll={(e) => {
+            pos_01 = scroll_pos(e, len_01);
+        }}
+    >
+        <CardContainer id={"about_me_0"} title={"About me,.."}>
+            <div class="avatar float-right">
+                <div class="mask mask-hexagon w-30 sm:w-48">
+                    <img class="" src={profile} alt="profile" />
                 </div>
-                <h1 class="font-semibold">About me,...</h1>
-                <p class="text-justify indent-12">
-                    I'm a mechanical engineer [who previously chose the path of
-                    economics] with strong interest in programming. Having honed
-                    my coding skills - especially in
-                    <span class="inline-flex items-baseline text-left">
-                        <img
-                            src={rust}
-                            class="mx-1 self-center rounded-full size-6"
-                            alt="test"
-                        />
-                        <span>Rust</span>
-                    </span>
-                    &
-                    <span class="inline-flex items-baseline text-left">
-                        <img
-                            src={python}
-                            class="mx-1 self-center rounded-full h-6 aspect-auto"
-                            alt="test"
-                        />
-                        <span>Python</span>
-                    </span>
-                    - alongside my engineering expertise, I can go beyond siloed
-                    thinking and deliver high-quality results across both disciplines.
-                </p>
-                <p class="text-justify indent-12">
-                    If you have interesting projects, feel free to contact me.
-                </p>
             </div>
-        </div>
-        <div id="about_me_2" class="carousel-item w-full flex-col">
-            <h1 class="font-semibold italic">...and my background.</h1>
-            <ul class="flex-1 list text-lg">
+            <p class="text-justify indent-6 sm:indent-12">
+                I'm a mechanical engineer [who previously chose the path of
+                economics] with strong interest in programming. Having honed my
+                coding skills - especially in
+                <span class="inline-flex items-baseline text-start">
+                    <img
+                        src={rust}
+                        class="mx-1 self-center rounded-full size-4 sm:size-6"
+                        alt="test"
+                    />
+                    Rust
+                </span>
+                &
+                <span class="inline-flex items-baseline w-fit">
+                    <img
+                        src={python}
+                        class="mx-1 self-center rounded-full size-4 sm:size-6"
+                        alt="test"
+                    />
+                    Python
+                </span>
+                - alongside my engineering expertise, I can go beyond siloed thinking
+                and deliver high-quality results across both disciplines.
+            </p>
+            <p class="text-justify indent-6 sm:indent-12">
+                If you have interesting projects, feel free to contact me.
+            </p>
+        </CardContainer>
+        <CardContainer id={"about_me_1"} title={"..my skills,.."}>
+            Soon to be updated!
+        </CardContainer>
+        <CardContainer id={"about_me_2"} title={"..and my background."}>
+            <ul class="flex-1 list sm:text-lg">
                 <LiAcademia
                     degree={"M.Sc. Mechanical Engineering"}
                     university={"Technical University Braunschweig"}
@@ -68,11 +77,15 @@
                     university={"University of Cologne"}
                 />
             </ul>
-        </div>
+        </CardContainer>
     </div>
-    <div class="flex w-full justify-center gap-6">
-        <BtnCarousel dir="left" href={"#about_me_1"} />
-        <BtnCarousel dir="right" href={"#about_me_2"} />
+    <div class="flex w-full justify-center">
+        {#if pos_01 > 0}
+            <BtnCarousel dir="left" href={`#about_me_${pos_01 - 1}`} />
+        {/if}
+        {#if pos_01 < 2}
+            <BtnCarousel dir="right" href={`#about_me_${pos_01 + 1}`} />
+        {/if}
     </div>
 </PageContainer>
 

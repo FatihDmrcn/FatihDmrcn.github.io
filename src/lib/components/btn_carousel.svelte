@@ -2,7 +2,7 @@
     let { dir, href }: { dir: string; href: string } = $props();
 </script>
 
-<a {href} class="btn btn-square">
+<a {href} class="btn btn-ghost btn-square">
     <svg
         class="h-full aspect-square fill-base-content"
         xmlns="http://www.w3.org/2000/svg"
