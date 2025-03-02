@@ -28,7 +28,7 @@
 </script>
 
 <main
-    class="flex flex-col h-screen w-screen relative items-center font-mono"
+    class="flex flex-col h-svh w-svw relative items-center font-mono"
     style="background-color: color-mix(in srgb, {c1}, {c2} {p2}%);"
 >
     <div
@@ -40,7 +40,7 @@
     </div>
     <div
         onscroll={scroll_color}
-        class="flex-1 w-3xl carousel carousel-vertical text-xl"
+        class="flex-1 max-w-3xl carousel carousel-vertical text-xl"
     >
         {@render children()}
     </div>

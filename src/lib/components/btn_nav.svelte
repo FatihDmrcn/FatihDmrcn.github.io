@@ -28,7 +28,7 @@
     <div
         class="text-lg text-center capitalize font-semibold content-center transition-all transform-3d ease-in-out {pos ==
         0
-            ? 'w-30 h-8 scale-100'
+            ? 'w-28 h-8 scale-100'
             : 'w-18 h-0 scale-0'}"
     >
         {href.replace("#", "").replace("_", " ")}

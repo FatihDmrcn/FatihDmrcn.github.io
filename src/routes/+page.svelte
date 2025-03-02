@@ -14,16 +14,16 @@
 </svelte:head>
 
 <PageContainer id={"about_me"}>
-    <div class="carousel w-full">
+    <div class="flex-1 carousel w-full items-center">
         <div id="about_me_1" class="carousel-item w-full flex-col">
-            <h1 class="font-semibold italic">About me,...</h1>
             <div class="flex-1">
-                <div class="avatar float-right">
-                    <div class="mask mask-hexagon w-48">
+                <div class="avatar float-none sm:float-right">
+                    <div class="mask mask-hexagon w-36 sm:w-48">
                         <img class="" src={profile} alt="profile" />
                     </div>
                 </div>
-                <p class="text-justify indent-6">
+                <h1 class="font-semibold">About me,...</h1>
+                <p class="text-justify indent-12">
                     I'm a mechanical engineer [who previously chose the path of
                     economics] with strong interest in programming. Having honed
                     my coding skills - especially in
@@ -46,6 +46,9 @@
                     </span>
                     - alongside my engineering expertise, I can go beyond siloed
                     thinking and deliver high-quality results across both disciplines.
+                </p>
+                <p class="text-justify indent-12">
+                    If you have interesting projects, feel free to contact me.
                 </p>
             </div>
         </div>
