@@ -1,6 +1,5 @@
 <script lang="ts">
     import "../app.css";
-    import BtnNav from "$lib/components/btn_nav.svelte";
 
     let { children } = $props();
 
@@ -10,7 +9,7 @@
         "var(--color-base-300)",
     ];
     const length = 2;
-    let pos = $state(0);
+    let scroll = $state(0);
     let c1 = $state(colors[0]);
     let c2 = $state(colors[1]);
     let p2 = $state(0);
@@ -18,12 +17,10 @@
     function scroll_color(
         event: UIEvent & { currentTarget: EventTarget & HTMLElement },
     ) {
-        const element = event.currentTarget;
-        let a = element.scrollTop; // actual position for scrollTop
-        let b = element.scrollHeight - element.clientHeight; // max. value for scrollTop
-        let percentage = a / b;
-        pos = percentage * length;
-        let idx = Math.floor(pos);
+        const e = event.currentTarget;
+        let percentage = e.scrollTop / (e.scrollHeight - e.clientHeight);
+        let idx = Math.floor(percentage * length);
+        scroll = e.scrollTop / e.scrollHeight;
         p2 = (percentage * length - idx) * 100;
         c1 = colors[idx];
         c2 = idx == length ? colors[0] : colors[idx + 1];
@@ -35,11 +32,19 @@
     style="background-color: color-mix(in srgb, {c1}, {c2} {p2}%);"
 >
     <div
-        class="absolute top-0 left-0 navbar gap-1 glass justify-center shadow-none opacity-70"
+        class="absolute top-0 left-0 navbar flex-col glass justify-center shadow-none opacity-70"
     >
-        <BtnNav {pos} href={"#about_me"} />
-        <BtnNav {pos} href={"#my_work"} />
-        <BtnNav {pos} href={"#contact_me"} />
+        <div
+            class="relative w-xs grid grid-cols-3 justify-items-center pb-1 text-lg font-semibold"
+        >
+            <a href="#about_me">About Me</a>
+            <a href="#my_work">My Work</a>
+            <a href="#contact_me">Contact Me</a>
+            <div
+                class="absolute bottom-0 w-1/3 h-0.5 bg-neutral-content"
+                style="left: calc(var(--container-xs) * {scroll});"
+            ></div>
+        </div>
     </div>
     <div
         onscroll={scroll_color}
