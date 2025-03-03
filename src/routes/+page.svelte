@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { scroll_pos } from "$lib";
+    import { scroll_horizontal } from "$lib";
     import PageContainer from "$lib/components/page_container.svelte";
     import CardContainer from "$lib/components/card_container.svelte";
     import BtnCarousel from "$lib/components/btn_carousel.svelte";
@@ -11,7 +11,7 @@
     import LiAcademia from "$lib/components/li_academia.svelte";
 
     const len_01 = 2;
-    let pos_01 = $state(1);
+    let pos_01 = $state(0);
 </script>
 
 <svelte:head>
@@ -22,7 +22,7 @@
     <div
         class="flex-1 carousel w-full items-center"
         onscroll={(e) => {
-            pos_01 = scroll_pos(e, len_01);
+            pos_01 = scroll_horizontal(e, len_01);
         }}
     >
         <CardContainer id={"about_me_0"} title={"About me,.."}>
@@ -47,7 +47,7 @@
                 <span class="inline-flex items-baseline w-fit">
                     <img
                         src={python}
-                        class="mx-1 self-center rounded-full size-4 sm:size-6"
+                        class="mx-1 self-center rounded-full aspect-auto h-4 sm:h-6"
                         alt="test"
                     />
                     Python
@@ -79,13 +79,22 @@
             </ul>
         </CardContainer>
     </div>
-    <div class="flex w-full justify-center">
-        {#if pos_01 > 0}
-            <BtnCarousel dir="left" href={`#about_me_${pos_01 - 1}`} />
-        {/if}
-        {#if pos_01 < 2}
-            <BtnCarousel dir="right" href={`#about_me_${pos_01 + 1}`} />
-        {/if}
+    <div class="flex w-full justify-center gap-3">
+        <a
+            aria-label="test"
+            href={"#about_me_0"}
+            class="btn btn-xs btn-circle {pos_01 == 0 ? 'btn-neutral' : ''}"
+        ></a>
+        <a
+            aria-label="test"
+            href={"#about_me_1"}
+            class="btn btn-xs btn-circle {pos_01 == 1 ? 'btn-neutral' : ''}"
+        ></a>
+        <a
+            aria-label="test"
+            href={"#about_me_2"}
+            class="btn btn-xs btn-circle {pos_01 == 2 ? 'btn-neutral' : ''}"
+        ></a>
     </div>
 </PageContainer>
 

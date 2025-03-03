@@ -1,4 +1,4 @@
-export function scroll_pos(
+export function scroll_horizontal(
     event: UIEvent & { currentTarget: EventTarget & HTMLElement }, length: number
 ) {
     const element = event.currentTarget;

@@ -4,7 +4,11 @@
 
     let { children } = $props();
 
-    const colors = ["#FFFFFFFF", "#0084CC", "#960018"];
+    const colors = [
+        "var(--color-base-100)",
+        "var(--color-base-200)",
+        "var(--color-base-300)",
+    ];
     const length = 2;
     let pos = $state(0);
     let c1 = $state(colors[0]);
@@ -39,7 +43,7 @@
     </div>
     <div
         onscroll={scroll_color}
-        class="flex-1 max-w-3xl carousel carousel-vertical"
+        class="flex-1 max-w-3xl carousel carousel-vertical sm:text-lg"
     >
         {@render children()}
     </div>
