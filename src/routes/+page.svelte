@@ -3,9 +3,10 @@
     import PageContainer from "$lib/components/page_container.svelte";
     import CardContainer from "$lib/components/card_container.svelte";
     import BtnCarousel from "$lib/components/btn_carousel.svelte";
+    import Badge from "$lib/components/badge.svelte";
 
     import profile from "$lib/fig/profile.jpg";
-    // import profile from "$lib/profile_drawing.jpg";
+
     import rust from "$lib/fig/rust_logo.svg";
     import python from "$lib/fig/python_logo.svg";
     import LiAcademia from "$lib/components/li_academia.svelte";
@@ -27,37 +28,23 @@
     >
         <CardContainer id={"about_me_0"} title={"About me,.."}>
             <div class="avatar float-right">
-                <div class="mask mask-hexagon w-30 sm:w-48">
+                <div class="mask mask-hexagon opacity-80 w-30 sm:w-48">
                     <img class="" src={profile} alt="profile" />
                 </div>
             </div>
-            <p class="text-justify indent-6 sm:indent-12">
-                I'm a mechanical engineer [who previously chose the path of
-                economics] with strong interest in programming. Having honed my
-                coding skills - especially in
-                <span class="inline-flex items-baseline text-start">
-                    <img
-                        src={rust}
-                        class="mx-1 self-center rounded-full size-4 sm:size-6"
-                        alt="test"
-                    />
-                    Rust
-                </span>
-                &
-                <span class="inline-flex items-baseline w-fit">
-                    <img
-                        src={python}
-                        class="mx-1 self-center rounded-full aspect-auto h-4 sm:h-6"
-                        alt="test"
-                    />
-                    Python
-                </span>
-                - alongside my engineering expertise, I can go beyond siloed thinking
-                and deliver high-quality results across both disciplines.
-            </p>
-            <p class="text-justify indent-6 sm:indent-12">
-                If you have interesting projects, feel free to contact me.
-            </p>
+            <div class="text-justify indent-6 sm:indent-12">
+                I'm a mechanical engineer - who previously chose the path of
+                economics - with honed skills in programming; especially in
+                <Badge src={rust} name={"Rust"} /> &
+                <Badge src={python} name={"Python"} />. By combining these
+                skills with my engineering expertise, I can move beyond siloed
+                thinking and deliver high-quality results across both
+                disciplines.
+            </div>
+            <div class="text-justify indent-6 sm:indent-12">
+                So, if you have interesting projects or potential business
+                inquiries, feel free to contact me.
+            </div>
         </CardContainer>
         <CardContainer id={"about_me_1"} title={"..my skills,.."}>
             Soon to be updated!
@@ -79,23 +66,7 @@
             </ul>
         </CardContainer>
     </div>
-    <div class="flex w-full justify-center gap-3">
-        <a
-            aria-label="test"
-            href={"#about_me_0"}
-            class="btn btn-xs btn-circle {pos_01 == 0 ? 'btn-neutral' : ''}"
-        ></a>
-        <a
-            aria-label="test"
-            href={"#about_me_1"}
-            class="btn btn-xs btn-circle {pos_01 == 1 ? 'btn-neutral' : ''}"
-        ></a>
-        <a
-            aria-label="test"
-            href={"#about_me_2"}
-            class="btn btn-xs btn-circle {pos_01 == 2 ? 'btn-neutral' : ''}"
-        ></a>
-    </div>
+    <BtnCarousel id="about_me" length={2} pos={pos_01} />
 </PageContainer>
 
 <PageContainer id={"my_work"}>
