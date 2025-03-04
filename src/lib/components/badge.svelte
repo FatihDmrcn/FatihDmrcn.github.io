@@ -11,6 +11,6 @@
         ? 'badge-xs sm:badge-md'
         : 'badge-md sm:badge-lg'} font-bold indent-0"
 >
-    <img {src} class="size-9/10" alt={name} />
+    <img {src} class="h-9/10 aspect-auto" alt={name} />
     {name}
 </div>

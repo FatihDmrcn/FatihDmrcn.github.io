@@ -10,6 +10,7 @@
     import rust from "$lib/logos/rust.svg";
     import python from "$lib/logos/python.svg";
     import ts from "$lib/logos/ts.svg";
+    import svelte from "$lib/logos/svelte.svg";
     import freecad from "$lib/logos/freecad.svg";
     import LiAcademia from "$lib/components/li_academia.svelte";
 
@@ -51,7 +52,10 @@
         <CardContainer id={"about_me_1"} title={"..my skills,.."}>
             <div class="w-full flex flex-row flex-wrap gap-2">
                 <Badge src={freecad} name={"FreeCAD"} />
+                <Badge src={rust} name={"Rust"} />
+                <Badge src={python} name={"Python"} />
                 <Badge src={ts} name={"TypeScript"} />
+                <Badge src={svelte} name={"Svelte"} />
             </div>
         </CardContainer>
         <CardContainer id={"about_me_2"} title={"..and my background."}>
