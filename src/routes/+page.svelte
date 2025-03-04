@@ -8,6 +8,9 @@
 
     import profile from "$lib/fig/profile.jpg";
 
+    import cargo from "$lib/logos/cargo.png";
+    import actixweb from "$lib/logos/actixweb.png";
+    import fenics from "$lib/logos/fenics.png";
     import rust from "$lib/logos/rust.svg";
     import tauri from "$lib/logos/tauri.svg";
     import python from "$lib/logos/python.svg";
@@ -66,6 +69,7 @@
                         <Badge src={siemens} name={"SolidEdge"} />
                         <Badge src={freecad} name={"FreeCAD"} />
                         <Badge src={docker} name={"Docker"} />
+                        <Badge src={postgresql} name={"PostgreSQL"} />
                     </div>
                 </li>
                 <li class="list-row">
@@ -80,19 +84,18 @@
                 <li class="list-row">
                     Packages / Frameworks
                     <div class="list-col-wrap">
-                        <Badge src={tauri} name={"Tauri"} />
+                        <Badge src={actixweb} name={"Actix Web"} />
+                        <Badge src={cargo} name={"Embassy"} />
+                        <Badge src={fenics} name={"FEniCS"} />
+                        <Badge src={matplotlib} name={"matplotlib"} />
+                        <Badge src={cargo} name={"ndarray"} />
                         <Badge src={numpy} name={"NumPy"} />
                         <Badge src={pandas} name={"pandas"} />
                         <Badge src={pytorch} name={"PyTorch"} />
-                        <Badge src={matplotlib} name={"Matplotlib"} />
-                    </div>
-                </li>
-                <li class="list-row">
-                    Web
-                    <div class="list-col-wrap">
+                        <Badge src={cargo} name={"SQLx"} />
                         <Badge src={svelte} name={"Svelte"} />
                         <Badge src={tailwindcss} name={"TailwindCSS"} />
-                        <Badge src={postgresql} name={"PostgreSQL"} />
+                        <Badge src={tauri} name={"Tauri"} />
                     </div>
                 </li>
             </ul>
