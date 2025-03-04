@@ -22,6 +22,7 @@
     import tailwindcss from "$lib/logos/tailwindcss.svg";
     import freecad from "$lib/logos/freecad.svg";
     import siemens from "$lib/logos/siemens.svg";
+    import kicad from "$lib/logos/kicad.png";
     import postgresql from "$lib/logos/postgresql.svg";
     import docker from "$lib/logos/docker.svg";
     import numpy from "$lib/logos/numpy.svg";
@@ -74,6 +75,7 @@
                         <Badge src={abaqus} name={"Abaqus"} />
                         <Badge src={docker} name={"Docker"} />
                         <Badge src={postgresql} name={"PostgreSQL"} />
+                        <Badge src={kicad} name={"KiCad"} />
                     </div>
                 </li>
                 <li class="list-row">
