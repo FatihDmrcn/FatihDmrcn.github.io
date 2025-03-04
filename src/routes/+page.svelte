@@ -12,8 +12,10 @@
     import actixweb from "$lib/logos/actixweb.png";
     import fenics from "$lib/logos/fenics.png";
     import abaqus from "$lib/logos/abaqus.png";
+    import embassy from "$lib/logos/embassy.png";
     import rust from "$lib/logos/rust.svg";
     import tauri from "$lib/logos/tauri.svg";
+    import diesel from "$lib/logos/diesel.svg";
     import python from "$lib/logos/python.svg";
     import ts from "$lib/logos/ts.svg";
     import svelte from "$lib/logos/svelte.svg";
@@ -52,9 +54,9 @@
                 I'm a mechanical engineer - who previously chose the path of
                 economics - with honed skills in programming; especially in
                 <Badge src={rust} name={"Rust"} /> &
-                <Badge src={python} name={"Python"} />. By combining
-                these skills with my engineering expertise, I can move beyond
-                siloed thinking and deliver high-quality results across both
+                <Badge src={python} name={"Python"} />. By combining these
+                skills with my engineering expertise, I can move beyond siloed
+                thinking and deliver high-quality results across both
                 disciplines.
             </div>
             <div class="text-justify indent-6 sm:indent-12">
@@ -86,7 +88,8 @@
                     Packages / Frameworks
                     <div class="list-col-wrap flex flex-row flex-wrap gap-1">
                         <Badge src={actixweb} name={"Actix Web"} />
-                        <Badge src={cargo} name={"Embassy"} />
+                        <Badge src={diesel} name={"Diesel"} />
+                        <Badge src={embassy} name={"Embassy"} />
                         <Badge src={fenics} name={"FEniCS"} />
                         <Badge src={matplotlib} name={"matplotlib"} />
                         <Badge src={cargo} name={"ndarray"} />
