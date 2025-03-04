@@ -11,6 +11,7 @@
     import cargo from "$lib/logos/cargo.png";
     import actixweb from "$lib/logos/actixweb.png";
     import fenics from "$lib/logos/fenics.png";
+    import abaqus from "$lib/logos/abaqus.png";
     import rust from "$lib/logos/rust.svg";
     import tauri from "$lib/logos/tauri.svg";
     import python from "$lib/logos/python.svg";
@@ -65,25 +66,25 @@
             <ul class="list">
                 <li class="list-row">
                     Applications
-                    <div class="list-col-wrap">
+                    <div class="list-col-wrap flex flex-row flex-wrap gap-1">
                         <Badge src={siemens} name={"SolidEdge"} />
                         <Badge src={freecad} name={"FreeCAD"} />
+                        <Badge src={abaqus} name={"Abaqus"} />
                         <Badge src={docker} name={"Docker"} />
                         <Badge src={postgresql} name={"PostgreSQL"} />
                     </div>
                 </li>
                 <li class="list-row">
                     Languages
-                    <div class="list-col-wrap">
+                    <div class="list-col-wrap flex flex-row flex-wrap gap-1">
                         <Badge src={rust} name={"Rust"} />
                         <Badge src={python} name={"Python"} />
                         <Badge src={ts} name={"TypeScript"} />
                     </div>
                 </li>
-
                 <li class="list-row">
                     Packages / Frameworks
-                    <div class="list-col-wrap">
+                    <div class="list-col-wrap flex flex-row flex-wrap gap-1">
                         <Badge src={actixweb} name={"Actix Web"} />
                         <Badge src={cargo} name={"Embassy"} />
                         <Badge src={fenics} name={"FEniCS"} />

@@ -3,7 +3,7 @@
         $props();
 </script>
 
-<div class="flex w-full justify-center gap-3 opacity-70">
+<div class="flex w-full justify-center gap-3">
     {#each Array(length + 1) as _, i}
         <a
             aria-label="test"
