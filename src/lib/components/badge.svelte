@@ -1,8 +1,16 @@
 <script lang="ts">
-    let { src, name }: { src: string; name: string } = $props();
+    let {
+        src,
+        name,
+        inline = false,
+    }: { src: string; name: string; inline?: boolean } = $props();
 </script>
 
-<div class="badge badge-neutral badge-xs sm:badge-md font-bold indent-0">
+<div
+    class="badge badge-neutral {inline
+        ? 'badge-xs sm:badge-md'
+        : 'badge-md sm:badge-lg'} font-bold indent-0"
+>
     <img {src} class="size-9/10" alt={name} />
     {name}
 </div>

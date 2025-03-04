@@ -7,8 +7,10 @@
 
     import profile from "$lib/fig/profile.jpg";
 
-    import rust from "$lib/fig/rust_logo.svg";
-    import python from "$lib/fig/python_logo.svg";
+    import rust from "$lib/logos/rust.svg";
+    import python from "$lib/logos/python.svg";
+    import ts from "$lib/logos/ts.svg";
+    import freecad from "$lib/logos/freecad.svg";
     import LiAcademia from "$lib/components/li_academia.svelte";
 
     const len_01 = 2;
@@ -35,10 +37,10 @@
             <div class="text-justify indent-6 sm:indent-12">
                 I'm a mechanical engineer - who previously chose the path of
                 economics - with honed skills in programming; especially in
-                <Badge src={rust} name={"Rust"} /> &
-                <Badge src={python} name={"Python"} />. By combining these
-                skills with my engineering expertise, I can move beyond siloed
-                thinking and deliver high-quality results across both
+                <Badge src={rust} name={"Rust"} inline /> &
+                <Badge src={python} name={"Python"} inline />. By combining
+                these skills with my engineering expertise, I can move beyond
+                siloed thinking and deliver high-quality results across both
                 disciplines.
             </div>
             <div class="text-justify indent-6 sm:indent-12">
@@ -47,7 +49,10 @@
             </div>
         </CardContainer>
         <CardContainer id={"about_me_1"} title={"..my skills,.."}>
-            Soon to be updated!
+            <div class="w-full flex flex-row flex-wrap gap-2">
+                <Badge src={freecad} name={"FreeCAD"} />
+                <Badge src={ts} name={"TypeScript"} />
+            </div>
         </CardContainer>
         <CardContainer id={"about_me_2"} title={"..and my background."}>
             <ul class="flex-1 list sm:text-lg">
