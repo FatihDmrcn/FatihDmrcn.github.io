@@ -78,7 +78,7 @@
                 </li>
 
                 <li class="list-row">
-                    Packages / Framworks
+                    Packages / Frameworks
                     <div class="list-col-wrap">
                         <Badge src={tauri} name={"Tauri"} />
                         <Badge src={numpy} name={"NumPy"} />
