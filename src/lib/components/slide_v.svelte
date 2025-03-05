@@ -6,7 +6,7 @@
 
 <div
     {id}
-    class="carousel-item box-border flex-col h-full w-full items-center justify-center pt-16 pb-8"
+    class="carousel-item box-border h-full w-full items-center justify-center flex-col pt-16"
 >
     {@render children()}
 </div>

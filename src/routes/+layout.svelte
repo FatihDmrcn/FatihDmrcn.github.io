@@ -5,8 +5,8 @@
 
     const colors = [
         "var(--color-base-100)",
-        "var(--color-base-200)",
-        "var(--color-base-300)",
+        "var(--color-base-100)",
+        "var(--color-base-100)",
     ];
     const length = 2;
     let scroll = $state(0);
@@ -28,18 +28,16 @@
 </script>
 
 <main
-    class="flex flex-col h-dvh w-dvw relative items-center"
+    class="flex flex-col h-svh w-svw relative items-center font-mono"
     style="background-color: color-mix(in srgb, {c1}, {c2} {p2}%);"
 >
-    <div
-        class="absolute top-0 left-0 navbar flex-col glass justify-center shadow-none opacity-70"
-    >
+    <div class="absolute top-0 left-0 navbar justify-center">
         <div
             class="relative w-xs grid grid-cols-3 justify-items-center pb-1 text-lg font-semibold"
         >
             <a href="#about_me">About Me</a>
-            <a href="#my_work">My Work</a>
-            <a href="#contact_me">Contact Me</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
             <div
                 class="absolute bottom-0 w-1/3 h-0.5 bg-base-content"
                 style="left: calc(var(--container-xs) * {scroll});"
@@ -48,7 +46,7 @@
     </div>
     <div
         onscroll={scroll_color}
-        class="flex-1 max-w-3xl carousel carousel-vertical sm:text-lg"
+        class="flex-1 max-w-3xl carousel carousel-vertical overflow-x-hidden sm:text-lg"
     >
         {@render children()}
     </div>
