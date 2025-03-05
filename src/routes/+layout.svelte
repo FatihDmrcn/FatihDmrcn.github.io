@@ -41,7 +41,7 @@
             <a href="#my_work">My Work</a>
             <a href="#contact_me">Contact Me</a>
             <div
-                class="absolute bottom-0 w-1/3 h-0.5 bg-neutral-content"
+                class="absolute bottom-0 w-1/3 h-0.5 bg-base-content"
                 style="left: calc(var(--container-xs) * {scroll});"
             ></div>
         </div>

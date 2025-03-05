@@ -10,12 +10,13 @@
 
     import cargo from "$lib/logos/cargo.png";
     import actixweb from "$lib/logos/actixweb.png";
+    import daisyui from "$lib/logos/daisyui.png";
     import fenics from "$lib/logos/fenics.png";
     import abaqus from "$lib/logos/abaqus.png";
     import embassy from "$lib/logos/embassy.png";
     import rust from "$lib/logos/rust.svg";
     import tauri from "$lib/logos/tauri.svg";
-    import diesel from "$lib/logos/diesel.svg";
+    import diesel from "$lib/logos/diesel.png";
     import python from "$lib/logos/python.svg";
     import ts from "$lib/logos/ts.svg";
     import svelte from "$lib/logos/svelte.svg";
@@ -69,7 +70,9 @@
             <ul class="list">
                 <li class="list-row">
                     Applications
-                    <div class="list-col-wrap flex flex-row flex-wrap gap-1">
+                    <div
+                        class="list-col-wrap flex flex-row flex-wrap gap-1 sm:gap-2"
+                    >
                         <Badge src={siemens} name={"SolidEdge"} />
                         <Badge src={freecad} name={"FreeCAD"} />
                         <Badge src={abaqus} name={"Abaqus"} />
@@ -80,7 +83,9 @@
                 </li>
                 <li class="list-row">
                     Languages
-                    <div class="list-col-wrap flex flex-row flex-wrap gap-1">
+                    <div
+                        class="list-col-wrap flex flex-row flex-wrap gap-1 sm:gap-2"
+                    >
                         <Badge src={rust} name={"Rust"} />
                         <Badge src={python} name={"Python"} />
                         <Badge src={ts} name={"TypeScript"} />
@@ -88,7 +93,9 @@
                 </li>
                 <li class="list-row">
                     Packages / Frameworks
-                    <div class="list-col-wrap flex flex-row flex-wrap gap-1">
+                    <div
+                        class="list-col-wrap flex flex-row flex-wrap gap-1 sm:gap-2"
+                    >
                         <Badge src={actixweb} name={"Actix Web"} />
                         <Badge src={diesel} name={"Diesel"} />
                         <Badge src={embassy} name={"Embassy"} />
@@ -101,6 +108,7 @@
                         <Badge src={cargo} name={"SQLx"} />
                         <Badge src={svelte} name={"Svelte"} />
                         <Badge src={tailwindcss} name={"TailwindCSS"} />
+                        <Badge src={daisyui} name={"daisyUI"} />
                         <Badge src={tauri} name={"Tauri"} />
                     </div>
                 </li>
