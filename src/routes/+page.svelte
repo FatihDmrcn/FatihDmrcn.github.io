@@ -41,9 +41,9 @@
 <SlideV id={"about_me"}>
     <CarouselH id={"about_me"} length={3}>
         <SlideH id={"about_me_0"} title={"Who I Am"}>
-            <div class="avatar float-right">
-                <div class="mask mask-hexagon opacity-80 w-30 sm:w-48">
-                    <img class="" src={profile} alt="profile" />
+            <div class="avatar sm:float-right">
+                <div class="mask mask-hexagon-2 sm:mask-hexagon w-48">
+                    <img src={profile} alt="profile" />
                 </div>
             </div>
             <div class="text-justify indent-6 sm:indent-12">
@@ -94,7 +94,7 @@
             </ul>
         </SlideH>
         <SlideH id={"about_me_2"} title={"My Background"}>
-            <ul class="list sm:text-lg">
+            <ul class="list">
                 <LiAcademia
                     degree={"Mechanical Engineering, M.Sc."}
                     university={"Technical University Braunschweig"}
