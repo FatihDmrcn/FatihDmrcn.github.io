@@ -31,7 +31,7 @@
     class="flex flex-col h-svh w-svw relative items-center"
     style="background-color: color-mix(in srgb, {c1}, {c2} {p2}%);"
 >
-    <div class="absolute top-0 left-0 navbar justify-center">
+    <div class="absolute top-0 left-0 navbar justify-center z-10">
         <div
             class="relative w-xs grid grid-cols-3 justify-items-center pb-1 text-lg font-semibold"
         >
