@@ -8,11 +8,11 @@
     }: { id: string; title: string; children: Snippet } = $props();
 </script>
 
-<div {id} class="carousel-item box-border w-full card card-sm sm:card-lg">
-    <div class="card-body">
-        <div class="card-title sm:text-xl">{title}</div>
-        <div class="sm:text-lg">
-            {@render children()}
+<div {id} class="carousel-item box-border w-full">
+    <div class="card sm:card-xl grid grid-cols-1 w-full">
+        <div class="card-body">
+            <div class="card-title">{title}</div>
+            <div>{@render children()}</div>
         </div>
     </div>
 </div>

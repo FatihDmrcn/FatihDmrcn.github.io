@@ -113,7 +113,7 @@
 </SlideV>
 
 <SlideV id={"portfolio"}>
-    <CarouselH id={"portfolio"} length={4}>
+    <CarouselH id={"portfolio"} length={5}>
         <SlideH id={"portfolio_0"} title={"Soon to be updated!"}>
             <Placeholder />
         </SlideH>
@@ -124,6 +124,9 @@
             <Placeholder />
         </SlideH>
         <SlideH id={"portfolio_3"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </SlideH>
+        <SlideH id={"portfolio_4"} title={"Soon to be updated!"}>
             <Placeholder />
         </SlideH>
     </CarouselH>
