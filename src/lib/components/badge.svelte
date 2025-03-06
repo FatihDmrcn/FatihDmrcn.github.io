@@ -3,7 +3,7 @@
 </script>
 
 <div
-    class="badge badge-ghost bg-base-300 badge-xs sm:badge-md indent-0 rounded-sm font-semibold"
+    class="badge badge-xs badge-ghost bg-base-300 sm:badge-md indent-0 rounded-sm font-semibold"
 >
     <img {src} class="h-9/10 aspect-auto" alt={name} />
     {name}

@@ -28,7 +28,7 @@
 </script>
 
 <main
-    class="flex flex-col h-svh w-svw relative items-center font-mono"
+    class="flex flex-col h-svh w-svw relative items-center"
     style="background-color: color-mix(in srgb, {c1}, {c2} {p2}%);"
 >
     <div class="absolute top-0 left-0 navbar justify-center">
