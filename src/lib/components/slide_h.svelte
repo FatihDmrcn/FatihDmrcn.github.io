@@ -12,7 +12,7 @@
     <div class="card sm:card-xl grid grid-cols-1 w-full">
         <div class="card-body">
             <div class="card-title">{title}</div>
-            <div>{@render children()}</div>
+            {@render children()}
         </div>
     </div>
 </div>
