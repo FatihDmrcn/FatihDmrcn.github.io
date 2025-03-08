@@ -27,7 +27,7 @@
         <a
             aria-label="test"
             href={`#${id}_${i}`}
-            class="btn btn-xs btn-circle {pos == i ? 'bg-base-content' : ''}"
+            class="btn btn-xs btn-circle {pos == i ? 'btn-neutral' : ''}"
         ></a>
     {/each}
 </div>

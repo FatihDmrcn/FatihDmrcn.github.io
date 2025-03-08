@@ -4,12 +4,13 @@
     import SlideV from "$lib/components/slide_v.svelte";
 
     import Badge from "$lib/components/badge.svelte";
+    import LiBadge from "$lib/components/li_badge.svelte";
     import LiAcademia from "$lib/components/li_academia.svelte";
 
     import profile from "$lib/fig/profile_drawing.jpg";
 
     import cargo from "$lib/logos/cargo.png";
-    import actixweb from "$lib/logos/actixweb.png";
+    // import actixweb from "$lib/logos/actixweb.png";
     import daisyui from "$lib/logos/daisyui.png";
     import fenics from "$lib/logos/fenics.png";
     import abaqus from "$lib/logos/abaqus.png";
@@ -31,7 +32,6 @@
     import pytorch from "$lib/logos/pytorch.svg";
     import matplotlib from "$lib/logos/matplotlib.svg";
     import Placeholder from "$lib/components/placeholder.svelte";
-    import LiBadge from "$lib/components/li_badge.svelte";
 </script>
 
 <svelte:head>
@@ -76,7 +76,7 @@
                     <Badge src={ts} name={"TypeScript"} />
                 </LiBadge>
                 <LiBadge title={"Packages / Frameworks"}>
-                    <Badge src={actixweb} name={"Actix Web"} />
+                    <Badge src={cargo} name={"Actix Web"} />
                     <Badge src={diesel} name={"Diesel"} />
                     <Badge src={embassy} name={"Embassy"} />
                     <Badge src={fenics} name={"FEniCS"} />
