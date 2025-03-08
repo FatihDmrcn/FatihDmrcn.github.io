@@ -1,11 +1,14 @@
 <script lang="ts">
     import "../app.css";
-    import { colors } from "$lib";
+    import { length, theme, color_key, color } from "$lib";
+    import { onMount } from "svelte";
 
     let { children } = $props();
-
-    const length = 2;
     let scroll = $state(0);
+    let root: HTMLElement | null = $state.raw(null);
+    onMount(() => {
+        root = document.querySelector(":root");
+    });
 
     function scroll_color(
         event: UIEvent & { currentTarget: EventTarget & HTMLElement },
@@ -15,13 +18,12 @@
         let percentage = e.scrollTop / (e.scrollHeight - e.clientHeight);
         let idx = Math.floor(percentage * length);
         let p2 = (percentage * length - idx) * 100;
-        for (let [k, v] of Object.entries(colors)) {
-            let color1 = v[idx];
-            let color2 = idx == length ? v[0] : v[idx + 1];
-            let root: HTMLElement | null = document.querySelector(":root");
+        let theme1 = theme[idx];
+        let theme2 = idx == length ? theme[0] : theme[idx + 1];
+        for (let key of color_key) {
             root!.style.setProperty(
-                `--color-${k}`,
-                `color-mix(in srgb, ${color1}, ${color2} ${p2}%)`,
+                `${key}`,
+                `color-mix(in srgb, ${color[theme1][key]}, ${color[theme2][key]} ${p2}%)`,
             );
         }
     }
