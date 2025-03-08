@@ -1,30 +1,29 @@
 <script lang="ts">
     import "../app.css";
-    import { length, theme, color_key, color } from "$lib";
     import { onMount } from "svelte";
 
     let { children } = $props();
     let scroll = $state(0);
-    let root: HTMLElement | null = $state.raw(null);
+
+    const length = 2;
+    let html: HTMLElement | null = $state.raw(null);
     onMount(() => {
-        root = document.querySelector(":root");
+        html = document.documentElement;
     });
 
-    function scroll_color(
+    function scroll_theme(
         event: UIEvent & { currentTarget: EventTarget & HTMLElement },
     ) {
         const e = event.currentTarget;
         scroll = e.scrollTop / e.scrollHeight;
         let percentage = e.scrollTop / (e.scrollHeight - e.clientHeight);
-        let idx = Math.floor(percentage * length);
-        let p2 = (percentage * length - idx) * 100;
-        let theme1 = theme[idx];
-        let theme2 = idx == length ? theme[0] : theme[idx + 1];
-        for (let key of color_key) {
-            root!.style.setProperty(
-                `${key}`,
-                `color-mix(in srgb, ${color[theme1][key]}, ${color[theme2][key]} ${p2}%)`,
-            );
+        let idx = Math.round(percentage * length);
+        if (idx == 0) {
+            html!.setAttribute("data-theme", "night");
+        } else if (idx == 1) {
+            html!.setAttribute("data-theme", "emerald");
+        } else {
+            html!.setAttribute("data-theme", "dim");
         }
     }
 </script>
@@ -44,7 +43,7 @@
         </div>
     </div>
     <div
-        onscroll={scroll_color}
+        onscroll={scroll_theme}
         class="flex-1 max-w-3xl carousel carousel-vertical overflow-x-hidden sm:text-lg"
     >
         {@render children()}
