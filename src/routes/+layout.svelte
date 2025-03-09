@@ -4,8 +4,9 @@
 
     let { children } = $props();
     let scroll = $state(0);
+    let idx = $state(0);
 
-    const length = 2;
+    const v_length = 2;
     let html: HTMLElement | null = $state.raw(null);
     onMount(() => {
         html = document.documentElement;
@@ -17,13 +18,16 @@
         const e = event.currentTarget;
         scroll = e.scrollTop / e.scrollHeight;
         let percentage = e.scrollTop / (e.scrollHeight - e.clientHeight);
-        let idx = Math.round(percentage * length);
-        if (idx == 0) {
-            html!.setAttribute("data-theme", "night");
-        } else if (idx == 1) {
-            html!.setAttribute("data-theme", "emerald");
-        } else {
-            html!.setAttribute("data-theme", "dim");
+        let new_idx = Math.round(percentage * v_length);
+        if (new_idx != idx) {
+            idx = new_idx;
+            if (idx == 0) {
+                html!.setAttribute("data-theme", "night");
+            } else if (idx == 1) {
+                html!.setAttribute("data-theme", "emerald");
+            } else {
+                html!.setAttribute("data-theme", "dim");
+            }
         }
     }
 </script>
