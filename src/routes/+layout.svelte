@@ -22,18 +22,20 @@
         if (new_idx != idx) {
             idx = new_idx;
             if (idx == 0) {
-                html!.setAttribute("data-theme", "night");
+                html!.style.backgroundColor = "var(--color-base-100)";
             } else if (idx == 1) {
-                html!.setAttribute("data-theme", "emerald");
+                html!.style.backgroundColor = "var(--color-base-100)";
             } else {
-                html!.setAttribute("data-theme", "dim");
+                html!.style.backgroundColor = "var(--color-base-300)";
             }
         }
     }
 </script>
 
 <main class="flex flex-col h-svh w-svw relative items-center">
-    <div class="absolute top-0 left-0 navbar justify-center z-10">
+    <div
+        class="absolute top-0 left-0 navbar glass shadow-none justify-center z-10"
+    >
         <div
             class="relative w-xs grid grid-cols-3 justify-items-center pb-1 text-lg font-semibold"
         >

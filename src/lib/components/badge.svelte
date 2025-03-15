@@ -3,7 +3,7 @@
 </script>
 
 <div
-    class="badge badge-sm sm:badge-md bg-base-300 indent-0 rounded-sm font-semibold"
+    class="badge badge-sm sm:badge-md bg-base-300 indent-0 font-semibold"
 >
     <img {src} class="h-9/10 aspect-auto" alt={name} />
     {name}

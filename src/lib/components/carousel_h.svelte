@@ -35,9 +35,7 @@
                 ? 'scale-0'
                 : 'scale-100'}"
         >
-            <path
-                d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"
-            />
+            <path d="M560-280 360-480l200-200v400Z" />
         </svg>
     </a>
     <div class="flex-1 flex gap-1.5 sm:gap-3 justify-center">
@@ -45,7 +43,7 @@
             <a
                 aria-label="slide"
                 href={`#${id}_${i}`}
-                class="btn btn-circle size-5 {pos == i
+                class="btn btn-square size-3 {pos == i
                     ? 'bg-base-content'
                     : 'bg-base-content/20'}"
             ></a>
@@ -64,9 +62,7 @@
                 ? 'scale-0'
                 : 'scale-100'}"
         >
-            <path
-                d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
-            />
+            <path d="M400-280v-400l200 200-200 200Z" />
         </svg>
     </a>
 </div>
