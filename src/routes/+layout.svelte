@@ -24,7 +24,7 @@
             if (idx == 0) {
                 html!.style.backgroundColor = "var(--color-base-100)";
             } else if (idx == 1) {
-                html!.style.backgroundColor = "var(--color-base-100)";
+                html!.style.backgroundColor = "var(--color-base-200)";
             } else {
                 html!.style.backgroundColor = "var(--color-base-300)";
             }
