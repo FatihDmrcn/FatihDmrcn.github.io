@@ -42,7 +42,7 @@
     <CarouselH id={"about_me"} length={3}>
         <SlideH id={"about_me_0"} title={"Who I Am"}>
             <div class="avatar m-auto">
-                <div class="mask mask-hexagon-2 w-48">
+                <div class="mask mask-hexagon-2 w-48 sepia-10">
                     <img src={profile} alt="profile" />
                 </div>
             </div>

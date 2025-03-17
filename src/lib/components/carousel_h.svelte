@@ -43,7 +43,7 @@
             <a
                 aria-label="slide"
                 href={`#${id}_${i}`}
-                class="btn btn-square size-3 {pos == i
+                class="btn btn-circle size-3 {pos == i
                     ? 'bg-base-content'
                     : 'bg-base-content/20'}"
             ></a>

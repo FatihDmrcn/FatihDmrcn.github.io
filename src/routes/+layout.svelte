@@ -3,32 +3,18 @@
     import { onMount } from "svelte";
 
     let { children } = $props();
-    let scroll = $state(0);
-    let idx = $state(0);
 
-    const v_length = 2;
     let html: HTMLElement | null = $state.raw(null);
     onMount(() => {
         html = document.documentElement;
     });
 
-    function scroll_theme(
+    let scroll = $state(0);
+    function onscroll(
         event: UIEvent & { currentTarget: EventTarget & HTMLElement },
     ) {
         const e = event.currentTarget;
         scroll = e.scrollTop / e.scrollHeight;
-        let percentage = e.scrollTop / (e.scrollHeight - e.clientHeight);
-        let new_idx = Math.round(percentage * v_length);
-        if (new_idx != idx) {
-            idx = new_idx;
-            if (idx == 0) {
-                html!.style.backgroundColor = "var(--color-base-100)";
-            } else if (idx == 1) {
-                html!.style.backgroundColor = "var(--color-base-200)";
-            } else {
-                html!.style.backgroundColor = "var(--color-base-300)";
-            }
-        }
     }
 </script>
 
@@ -49,7 +35,7 @@
         </div>
     </div>
     <div
-        onscroll={scroll_theme}
+        {onscroll}
         class="flex-1 max-w-3xl carousel carousel-vertical overflow-x-hidden sm:text-lg"
     >
         {@render children()}
