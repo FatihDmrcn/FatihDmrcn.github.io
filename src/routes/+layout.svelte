@@ -18,7 +18,7 @@
     }
 </script>
 
-<main class="flex flex-col h-svh w-svw relative items-center">
+<main class="flex flex-col h-svh w-svw relative items-center bg-base-200">
     <div
         class="absolute top-0 left-0 navbar glass shadow-none justify-center z-10"
     >
