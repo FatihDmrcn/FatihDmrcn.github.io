@@ -10,7 +10,6 @@
     import profile from "$lib/fig/profile_drawing.jpg";
 
     import cargo from "$lib/logos/cargo.png";
-    // import actixweb from "$lib/logos/actixweb.png";
     import daisyui from "$lib/logos/daisyui.png";
     import fenics from "$lib/logos/fenics.png";
     import abaqus from "$lib/logos/abaqus.png";
@@ -29,6 +28,7 @@
     import docker from "$lib/logos/docker.svg";
     import numpy from "$lib/logos/numpy.svg";
     import pandas from "$lib/logos/pandas.svg";
+    import polars from "$lib/logos/polars.svg";
     import pytorch from "$lib/logos/pytorch.svg";
     import matplotlib from "$lib/logos/matplotlib.svg";
     import Placeholder from "$lib/components/placeholder.svelte";
@@ -84,6 +84,7 @@
                     <Badge src={cargo} name={"ndarray"} />
                     <Badge src={numpy} name={"NumPy"} />
                     <Badge src={pandas} name={"pandas"} />
+                    <Badge src={polars} name={"Polars"} />
                     <Badge src={pytorch} name={"PyTorch"} />
                     <Badge src={cargo} name={"SQLx"} />
                     <Badge src={svelte} name={"Svelte"} />
