@@ -1,11 +1,10 @@
 <script lang="ts">
-    import CarouselH from "$lib/components/carousel_h.svelte";
-    import SlideH from "$lib/components/slide_h.svelte";
-    import SlideV from "$lib/components/slide_v.svelte";
+    import Card from "$lib/components/card.svelte";
+    import Carousel from "$lib/components/carousel.svelte";
+    import Slide from "$lib/components/slide.svelte";
 
     import Badge from "$lib/components/badge.svelte";
     import LiBadge from "$lib/components/li_badge.svelte";
-    import LiAcademia from "$lib/components/li_academia.svelte";
 
     import profile from "$lib/fig/profile_drawing.jpg";
 
@@ -38,101 +37,90 @@
     <title>Fatih Demircan</title>
 </svelte:head>
 
-<SlideV id={"about_me"}>
-    <CarouselH id={"about_me"} length={3}>
-        <SlideH id={"about_me_0"} title={"Who I Am"}>
-            <div class="avatar m-auto">
-                <div class="mask mask-hexagon-2 w-48 sepia-10">
-                    <img src={profile} alt="profile" />
-                </div>
-            </div>
-            <div class="text-justify indent-6 sm:indent-12">
-                I'm a mechanical engineer - who previously chose the path of
-                economics - with honed skills in programming; especially in
-                <Badge src={rust} name={"Rust"} /> &
-                <Badge src={python} name={"Python"} />. By combining these
-                skills with my engineering expertise, I can move beyond siloed
-                thinking and deliver high-quality results across both
-                disciplines.
-            </div>
-            <div class="text-justify indent-6 sm:indent-12">
-                So, if you have interesting projects or potential business
-                inquiries, feel free to contact me.
-            </div>
-        </SlideH>
-        <SlideH id={"about_me_1"} title={"What I Use"}>
-            <ul class="list">
-                <LiBadge title={"Applications"}>
-                    <Badge src={siemens} name={"SolidEdge"} />
-                    <Badge src={freecad} name={"FreeCAD"} />
-                    <Badge src={abaqus} name={"Abaqus"} />
-                    <Badge src={docker} name={"Docker"} />
-                    <Badge src={postgresql} name={"PostgreSQL"} />
-                    <Badge src={kicad} name={"KiCad"} />
-                </LiBadge>
-                <LiBadge title={"Languages"}>
-                    <Badge src={rust} name={"Rust"} />
-                    <Badge src={python} name={"Python"} />
-                    <Badge src={ts} name={"TypeScript"} />
-                </LiBadge>
-                <LiBadge title={"Packages / Frameworks"}>
-                    <Badge src={cargo} name={"Actix Web"} />
-                    <Badge src={diesel} name={"Diesel"} />
-                    <Badge src={embassy} name={"Embassy"} />
-                    <Badge src={fenics} name={"FEniCS"} />
-                    <Badge src={matplotlib} name={"matplotlib"} />
-                    <Badge src={cargo} name={"ndarray"} />
-                    <Badge src={numpy} name={"NumPy"} />
-                    <Badge src={pandas} name={"pandas"} />
-                    <Badge src={polars} name={"Polars"} />
-                    <Badge src={pytorch} name={"PyTorch"} />
-                    <Badge src={cargo} name={"SQLx"} />
-                    <Badge src={svelte} name={"Svelte"} />
-                    <Badge src={tailwindcss} name={"TailwindCSS"} />
-                    <Badge src={daisyui} name={"daisyUI"} />
-                    <Badge src={tauri} name={"Tauri"} />
-                </LiBadge>
-            </ul>
-        </SlideH>
-        <SlideH id={"about_me_2"} title={"My Background"}>
-            <ul class="list sm:text-lg">
-                <LiAcademia
-                    degree={"Mechanical Engineering, M.Sc."}
-                    university={"Technical University Braunschweig"}
-                />
-                <LiAcademia
-                    degree={"Mechanical Engineering, B.Sc."}
-                    university={"Technical University Braunschweig"}
-                />
-                <LiAcademia
-                    degree={"Economics,B.Sc."}
-                    university={"University of Cologne"}
-                />
-            </ul>
-        </SlideH>
-    </CarouselH>
-</SlideV>
+<Card title="Short Bio">
+    <div class="avatar m-auto">
+        <div class="mask mask-hexagon-2 w-48 sepia-10">
+            <img src={profile} alt="profile" />
+        </div>
+    </div>
+    <div class="text-justify indent-6 sm:indent-12">
+        I'm a mechanical engineer - who previously chose the path of economics -
+        with a passion for programming; especially using
+        <Badge src={rust} name={"Rust"} /> &
+        <Badge src={python} name={"Python"} />.
+    </div>
+    <div class="text-justify indent-6 sm:indent-12">
+        After high school, I initially chose to study industrial engineering but
+        later switched to economics at the University of Cologne. However,
+        driven by my passion for technology, I decided to pursue engineering as
+        a career. I completed my Bachelor's in mechanical engineering at the
+        Technical University of Braunschweig, followed by a Master's degree.
+        Throughout my studies, I focused on methodological depth, ultimately
+        specializing in mechatronics. This allowed me to combine traditional
+        engineering with my passion for programming, giving me a broader
+        perspective and enabling me to move beyond siloed thinking.
+    </div>
+    <div class="text-justify indent-6 sm:indent-12">
+        In case you have interesting projects or potential business inquiries,
+        feel free to <a href="#contact">contact</a> me.
+    </div>
+</Card>
 
-<SlideV id={"portfolio"}>
-    <CarouselH id={"portfolio"} length={5}>
-        <SlideH id={"portfolio_0"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </SlideH>
-        <SlideH id={"portfolio_1"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </SlideH>
-        <SlideH id={"portfolio_2"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </SlideH>
-        <SlideH id={"portfolio_3"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </SlideH>
-        <SlideH id={"portfolio_4"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </SlideH>
-    </CarouselH>
-</SlideV>
+<Card title="What I Use">
+    <ul class="list">
+        <LiBadge title={"Applications"}>
+            <Badge src={siemens} name={"SolidEdge"} />
+            <Badge src={freecad} name={"FreeCAD"} />
+            <Badge src={abaqus} name={"Abaqus"} />
+            <Badge src={docker} name={"Docker"} />
+            <Badge src={postgresql} name={"PostgreSQL"} />
+            <Badge src={kicad} name={"KiCad"} />
+        </LiBadge>
+        <LiBadge title={"Languages"}>
+            <Badge src={rust} name={"Rust"} />
+            <Badge src={python} name={"Python"} />
+            <Badge src={ts} name={"TypeScript"} />
+        </LiBadge>
+        <LiBadge title={"Packages / Frameworks"}>
+            <Badge src={cargo} name={"Actix Web"} />
+            <Badge src={diesel} name={"Diesel"} />
+            <Badge src={embassy} name={"Embassy"} />
+            <Badge src={fenics} name={"FEniCS"} />
+            <Badge src={matplotlib} name={"matplotlib"} />
+            <Badge src={cargo} name={"ndarray"} />
+            <Badge src={numpy} name={"NumPy"} />
+            <Badge src={pandas} name={"pandas"} />
+            <Badge src={polars} name={"Polars"} />
+            <Badge src={pytorch} name={"PyTorch"} />
+            <Badge src={cargo} name={"SQLx"} />
+            <Badge src={svelte} name={"Svelte"} />
+            <Badge src={tailwindcss} name={"TailwindCSS"} />
+            <Badge src={daisyui} name={"daisyUI"} />
+            <Badge src={tauri} name={"Tauri"} />
+        </LiBadge>
+    </ul>
+</Card>
 
-<SlideV id={"contact"}>
+<Card title="Portfolio">
+    <Carousel id={"portfolio"} length={5}>
+        <Slide id={"portfolio_0"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+        <Slide id={"portfolio_1"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+        <Slide id={"portfolio_2"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+        <Slide id={"portfolio_3"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+        <Slide id={"portfolio_4"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+    </Carousel>
+</Card>
+
+<Card title="Contact">
     <h1>Soon to be updated!</h1>
-</SlideV>
+</Card>

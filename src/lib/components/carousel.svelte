@@ -8,6 +8,8 @@
     }: { id: string; length: number; children: Snippet } = $props();
 
     let pos = $state(0);
+    let start = $derived(pos == 0);
+    let end = $derived(pos == length - 1);
 
     export function onscroll(
         event: UIEvent & { currentTarget: EventTarget & HTMLElement },
@@ -19,26 +21,13 @@
     }
 </script>
 
-<div class="flex-1 w-full carousel overflow-y-hidden items-center" {onscroll}>
-    {@render children()}
-</div>
-<div class="navbar">
-    <a
-        aria-label="pre"
-        href={pos > 0 ? `#${id}_${pos - 1}` : "#"}
-        class="size-12 {pos == 0 ? 'pointer-events-none' : ''}"
+<div class="flex-1 w-full relative">
+    <div class="w-full carousel overflow-y-hidden items-center" {onscroll}>
+        {@render children()}
+    </div>
+    <div
+        class="absolute w-full bottom-0 translate-y-1/2 flex gap-1 sm:gap-3 justify-center"
     >
-        <svg
-            viewBox="0 -960 960 960"
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-full fill-base-content transition-transform {pos == 0
-                ? 'scale-0'
-                : 'scale-100'}"
-        >
-            <path d="M560-280 360-480l200-200v400Z" />
-        </svg>
-    </a>
-    <div class="flex-1 flex gap-1.5 sm:gap-3 justify-center">
         {#each Array(length) as _, i}
             <a
                 aria-label="slide"
@@ -50,15 +39,33 @@
         {/each}
     </div>
     <a
-        aria-label="post"
-        href={pos < length - 1 ? `#${id}_${pos + 1}` : "#"}
-        class="size-12 {pos == length - 1 ? 'pointer-events-none' : ''}"
+        aria-label="pre"
+        href={pos > 0 ? `#${id}_${pos - 1}` : "#"}
+        class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 size-6 {start
+            ? 'pointer-events-none'
+            : ''}"
     >
         <svg
             viewBox="0 -960 960 960"
             xmlns="http://www.w3.org/2000/svg"
-            class="size-full fill-base-content transition-transform {pos ==
-            length - 1
+            class="size-full fill-base-content transition-transform {start
+                ? 'scale-0'
+                : 'scale-100'}"
+        >
+            <path d="M560-280 360-480l200-200v400Z" />
+        </svg>
+    </a>
+    <a
+        aria-label="post"
+        href={pos < length - 1 ? `#${id}_${pos + 1}` : "#"}
+        class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 size-6 {end
+            ? 'pointer-events-none'
+            : ''}"
+    >
+        <svg
+            viewBox="0 -960 960 960"
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-full fill-base-content transition-transform {end
                 ? 'scale-0'
                 : 'scale-100'}"
         >

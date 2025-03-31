@@ -9,7 +9,7 @@
 </script>
 
 <div {id} class="carousel-item box-border w-full">
-    <div class="card sm:card-xl grid grid-cols-1 w-full">
+    <div class="card-sm sm:card-md grid grid-cols-1 w-full">
         <div class="card-body">
             <div class="card-title">{title}</div>
             {@render children()}
