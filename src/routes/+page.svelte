@@ -2,11 +2,10 @@
     import Card from "$lib/components/card.svelte";
     import Carousel from "$lib/components/carousel.svelte";
     import Slide from "$lib/components/slide.svelte";
-
-    import Badge from "$lib/components/badge.svelte";
     import LiBadge from "$lib/components/li_badge.svelte";
+    import Badge from "$lib/components/badge.svelte";
 
-    import profile from "$lib/fig/profile_drawing.jpg";
+    import Placeholder from "$lib/components/placeholder.svelte";
 
     import cargo from "$lib/logos/cargo.png";
     import daisyui from "$lib/logos/daisyui.png";
@@ -30,7 +29,6 @@
     import polars from "$lib/logos/polars.svg";
     import pytorch from "$lib/logos/pytorch.svg";
     import matplotlib from "$lib/logos/matplotlib.svg";
-    import Placeholder from "$lib/components/placeholder.svelte";
 </script>
 
 <svelte:head>
@@ -38,16 +36,9 @@
 </svelte:head>
 
 <Card title="Short Bio">
-    <div class="avatar m-auto">
-        <div class="mask mask-hexagon-2 w-48 sepia-10">
-            <img src={profile} alt="profile" />
-        </div>
-    </div>
     <div class="text-justify indent-6 sm:indent-12">
         I'm a mechanical engineer - who previously chose the path of economics -
-        with a passion for programming; especially using
-        <Badge src={rust} name={"Rust"} /> &
-        <Badge src={python} name={"Python"} />.
+        with a passion for programming.
     </div>
     <div class="text-justify indent-6 sm:indent-12">
         After high school, I initially chose to study industrial engineering but
