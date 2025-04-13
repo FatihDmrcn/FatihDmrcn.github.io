@@ -7,6 +7,7 @@
 
     import Placeholder from "$lib/components/placeholder.svelte";
 
+    import mail from "$lib/mail.png";
     import cargo from "$lib/logos/cargo.png";
     import daisyui from "$lib/logos/daisyui.png";
     import fenics from "$lib/logos/fenics.png";
@@ -30,10 +31,6 @@
     import pytorch from "$lib/logos/pytorch.svg";
     import matplotlib from "$lib/logos/matplotlib.svg";
 </script>
-
-<svelte:head>
-    <title>Fatih Demircan</title>
-</svelte:head>
 
 <Card title="Short Bio">
     <div class="text-justify indent-6 sm:indent-12">
@@ -113,5 +110,7 @@
 </Card>
 
 <Card title="Contact">
-    <h1>Soon to be updated!</h1>
+    <div class="flex justify-center">
+        <img class="h-4 aspect-auto" src={mail} alt="mail" />
+    </div>
 </Card>
