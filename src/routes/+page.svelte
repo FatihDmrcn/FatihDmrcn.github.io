@@ -30,6 +30,8 @@
     import polars from "$lib/logos/polars.svg";
     import pytorch from "$lib/logos/pytorch.svg";
     import matplotlib from "$lib/logos/matplotlib.svg";
+
+    import ahrs_board from "$lib/fig/ahrs_board.webp";
 </script>
 
 <Card title="Short Bio">
@@ -91,8 +93,22 @@
 
 <Card title="Portfolio">
     <Carousel id={"portfolio"} length={5}>
-        <Slide id={"portfolio_0"} title={"Soon to be updated!"}>
-            <Placeholder />
+        <Slide id={"portfolio_0"} title={"AHRS-Board"}>
+            <div class="flex flex-col sm:flex-row gap-1 sm:gap-3">
+                <img
+                    class="w-full sm:w-2/5"
+                    src={ahrs_board}
+                    alt="ahrs_board"
+                />
+                <div class="text-justify">
+                    I've designed an AHRS-Module (Attitude Heading Reference
+                    System); the PCB as well as with the corresponding code
+                    which is written in Rust. The goal is to utilize this in
+                    future projects, primarily for a drone. The PCB was designed
+                    using KiCad whereas the embedded code uses the Embassy
+                    framework.
+                </div>
+            </div>
         </Slide>
         <Slide id={"portfolio_1"} title={"Soon to be updated!"}>
             <Placeholder />
@@ -111,6 +127,7 @@
 
 <Card title="Contact">
     <div class="flex justify-center">
-        <img class="h-4 aspect-auto" src={mail} alt="mail" />
+        Soon to be updated!
+        <!-- <img class="h-4 aspect-auto" src={mail} alt="mail" /> -->
     </div>
 </Card>

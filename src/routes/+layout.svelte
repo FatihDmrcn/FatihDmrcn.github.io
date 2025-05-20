@@ -18,6 +18,6 @@
         <div class="w-full flex flex-col divide-y-1 divide-base-content/10">
             {@render children()}
         </div>
-        <div class="pt-6 pb-12">Copyright Fatih Demircan - 2025</div>
+        <!-- <div class="pt-6 pb-12">Copyright Fatih Demircan - 2025</div> -->
     </div>
 </main>
