@@ -22,7 +22,7 @@
 </script>
 
 <div class="flex-1 w-full relative">
-    <div class="w-full carousel overflow-y-hidden items-center" {onscroll}>
+    <div class="w-full carousel overflow-y-hidden items-start" {onscroll}>
         {@render children()}
     </div>
     <div

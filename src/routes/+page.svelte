@@ -56,6 +56,37 @@
     </div>
 </Card>
 
+<Card title="Portfolio">
+    <Carousel id={"portfolio"} length={4}>
+        <Slide id={"portfolio_0"} title={"AHRS module"}>
+            <article class="text-justify">
+                <img
+                    class="rounded-box w-full sm:w-[45%] float-none sm:float-left mb-2 sm:mr-2"
+                    src={ahrs_board}
+                    alt="ahrs_board"
+                />
+                <p>
+                    I've designed an AHRS module (Attitude Heading Reference
+                    System), also integrating a GNSS chip as well as a pressure
+                    sensor. My work covers the design of the PCB as well as the
+                    corresponding code. The PCB was designed using KiCad whereas
+                    the embedded code makes use the Rust crate Embassy. The goal is
+                    to utilize this in future projects, primarily for a drone.
+                </p>
+            </article>
+        </Slide>
+        <Slide id={"portfolio_1"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+        <Slide id={"portfolio_2"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+        <Slide id={"portfolio_3"} title={"Soon to be updated!"}>
+            <Placeholder />
+        </Slide>
+    </Carousel>
+</Card>
+
 <Card title="What I Use">
     <ul class="list">
         <LiBadge title={"Applications"}>
@@ -89,40 +120,6 @@
             <Badge src={tauri} name={"Tauri"} />
         </LiBadge>
     </ul>
-</Card>
-
-<Card title="Portfolio">
-    <Carousel id={"portfolio"} length={5}>
-        <Slide id={"portfolio_0"} title={"AHRS-Board"}>
-            <div class="flex flex-col sm:flex-row gap-1 sm:gap-3">
-                <img
-                    class="w-full sm:w-2/5"
-                    src={ahrs_board}
-                    alt="ahrs_board"
-                />
-                <div class="text-justify">
-                    I've designed an AHRS-Module (Attitude Heading Reference
-                    System); the PCB as well as with the corresponding code
-                    which is written in Rust. The goal is to utilize this in
-                    future projects, primarily for a drone. The PCB was designed
-                    using KiCad whereas the embedded code uses the Embassy
-                    framework.
-                </div>
-            </div>
-        </Slide>
-        <Slide id={"portfolio_1"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </Slide>
-        <Slide id={"portfolio_2"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </Slide>
-        <Slide id={"portfolio_3"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </Slide>
-        <Slide id={"portfolio_4"} title={"Soon to be updated!"}>
-            <Placeholder />
-        </Slide>
-    </Carousel>
 </Card>
 
 <Card title="Contact">
