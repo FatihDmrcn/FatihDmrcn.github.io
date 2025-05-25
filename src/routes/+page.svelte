@@ -7,7 +7,7 @@
 
     import Placeholder from "$lib/components/placeholder.svelte";
 
-    import mail from "$lib/mail.png";
+    import mail from "$lib/fig/mail.png";
     import cargo from "$lib/logos/cargo.png";
     import daisyui from "$lib/logos/daisyui.png";
     import fenics from "$lib/logos/fenics.png";
@@ -70,8 +70,9 @@
                     System), also integrating a GNSS chip as well as a pressure
                     sensor. My work covers the design of the PCB as well as the
                     corresponding code. The PCB was designed using KiCad whereas
-                    the embedded code makes use the Rust crate Embassy. The goal is
-                    to utilize this in future projects, primarily for a drone.
+                    the embedded code makes use the Rust crate Embassy. The goal
+                    is to utilize this in future projects, primarily for a
+                    drone.
                 </p>
             </article>
         </Slide>
@@ -123,8 +124,15 @@
 </Card>
 
 <Card title="Contact">
-    <div class="flex justify-center">
-        Soon to be updated!
-        <!-- <img class="h-4 aspect-auto" src={mail} alt="mail" /> -->
-    </div>
+    <article class="text-center">
+        <img
+            class="mt-2 h-4 aspect-auto justify-self-center"
+            src={mail}
+            alt="mail"
+        />
+        <p class="pt-5 text-xs sm:text-sm">
+            *the email is embedded as image in order to avoid misuse through
+            webscraping!
+        </p>
+    </article>
 </Card>
