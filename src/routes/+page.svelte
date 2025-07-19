@@ -36,19 +36,19 @@
 
 <Card title="Short Bio">
     <div class="text-justify indent-6 sm:indent-12">
-        I'm a mechanical engineer - who previously chose the path of economics -
-        with a passion for programming.
+        I'm a mechanical engineer - who also holds a degree in economics - with
+        a passion for programming.
     </div>
     <div class="text-justify indent-6 sm:indent-12">
         After high school, I initially chose to study industrial engineering but
-        later switched to economics at the University of Cologne. However,
-        driven by my passion for technology, I decided to pursue engineering as
-        a career. I completed my Bachelor's in mechanical engineering at the
-        Technical University of Braunschweig, followed by a Master's degree.
-        Throughout my studies, I focused on methodological depth, ultimately
-        specializing in mechatronics. This allowed me to combine traditional
-        engineering with my passion for programming, giving me a broader
-        perspective and enabling me to move beyond siloed thinking.
+        opted for economics at the University of Cologne. However, driven by my
+        passion for technology, I decided to pursue engineering as a career. I
+        completed my Bachelor's in mechanical engineering at the Technical
+        University of Braunschweig, followed by a Master's degree. Throughout my
+        studies, I focused on methodological depth, eventually specializing in
+        mechatronics. This allowed me to combine traditional engineering with my
+        passion for programming, giving me a broader perspective and enabling me
+        to move beyond siloed thinking.
     </div>
     <div class="text-justify indent-6 sm:indent-12">
         In case you have interesting projects or potential business inquiries,
@@ -126,13 +126,13 @@
 <Card title="Contact">
     <article class="text-center">
         <img
-            class="mt-2 h-4 aspect-auto justify-self-center"
+            class="mt-2 h-5 aspect-auto justify-self-center"
             src={mail}
             alt="mail"
         />
         <p class="pt-5 text-xs sm:text-sm">
-            *the email is embedded as image in order to avoid misuse through
-            webscraping!
+            *the address is embedded as an image in order to avoid misuse
+            through webscraping!
         </p>
     </article>
 </Card>

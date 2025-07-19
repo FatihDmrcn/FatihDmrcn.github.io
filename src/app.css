@@ -2,3 +2,10 @@
 @plugin "daisyui" {
     themes: night --default;
 }
+@plugin "daisyui/theme" {
+    name: "night";
+    default: true;
+    --radius-selector: 0rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+}
