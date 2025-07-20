@@ -57,8 +57,8 @@
 </Card>
 
 <Card title="Portfolio">
-    <Carousel id={"portfolio"} length={4}>
-        <Slide id={"portfolio_0"} title={"AHRS module"}>
+    <Carousel length={4}>
+        <Slide title={"AHRS module"}>
             <article class="text-justify">
                 <img
                     class="rounded-box w-full sm:w-[45%] float-none sm:float-left mb-2 sm:mr-2"
@@ -76,13 +76,13 @@
                 </p>
             </article>
         </Slide>
-        <Slide id={"portfolio_1"} title={"Soon to be updated!"}>
+        <Slide title={"Soon to be updated!"}>
             <Placeholder />
         </Slide>
-        <Slide id={"portfolio_2"} title={"Soon to be updated!"}>
+        <Slide title={"Soon to be updated!"}>
             <Placeholder />
         </Slide>
-        <Slide id={"portfolio_3"} title={"Soon to be updated!"}>
+        <Slide title={"Soon to be updated!"}>
             <Placeholder />
         </Slide>
     </Carousel>
