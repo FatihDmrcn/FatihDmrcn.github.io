@@ -1,4 +1,4 @@
-<svg height="50" width="755" xmlns="http://www.w3.org/2000/svg">
+<svg height="50" width="595" xmlns="http://www.w3.org/2000/svg">
     <style>
         .mail {
             font: 50px sans-serif;
@@ -6,5 +6,5 @@
         }
     </style>
     <!-- <rect width="800" height="500" /> -->
-    <text class="mail" x="2" y="38">fatihd.contact [at] gmail [dot] com*</text>
+    <text class="mail" x="0" y="38">fatihd.contact@gmail.com*</text>
 </svg>

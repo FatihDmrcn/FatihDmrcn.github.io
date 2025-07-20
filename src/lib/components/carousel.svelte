@@ -7,6 +7,8 @@
         children,
     }: { id: string; length: number; children: Snippet } = $props();
 
+    let carousel: HTMLDivElement | undefined = $state(undefined);
+
     let pos = $state(0);
     let start = $derived(pos == 0);
     let end = $derived(pos == length - 1);
@@ -22,7 +24,11 @@
 </script>
 
 <div class="flex-1 w-full relative">
-    <div class="w-full carousel overflow-y-hidden items-start" {onscroll}>
+    <div
+        bind:this={carousel}
+        class="w-full carousel overflow-y-hidden items-start"
+        {onscroll}
+    >
         {@render children()}
     </div>
     <div
