@@ -3,7 +3,7 @@
         <path d="M0,-600 H600 V600 H107 V300 H-107 V600 H-600 V-600 Z" />
     </clipPath>
     <clipPath id="clipArc">
-        <path d="M0,-250 H50 V-500 H500 V500 H-500 V-500 H-50 V-250 Z" />
+        <path d="M0,-250 H20 V-500 H500 V500 H-500 V-500 H-20 V-250 Z" />
     </clipPath>
     <clipPath id="clipStroke">
         <path d="M0,-360 A360,360,0,0,1,0,360 H-440 V-360 Z" />
