@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../app.css";
-    import profile from "$lib/fig/profile_drawing.jpg";
+    import Favicon from "$lib/components/favicon.svelte";
     let { children } = $props();
 </script>
 
@@ -10,14 +10,13 @@
 
 <main class="flex justify-center">
     <div class="max-w-3xl flex flex-col items-center sm:text-lg">
-        <div class="avatar pt-6">
-            <div class="rounded-full w-54 sm:42 sepia-10">
-                <img src={profile} alt="profile" />
-            </div>
+        <div class="inline-flex mt-6">
+            <Favicon />
+            <h1 class="text-4xl">Fatih Demircan</h1>
         </div>
         <div class="w-full flex flex-col divide-y-1 divide-base-content/10">
             {@render children()}
         </div>
-        <!-- <div class="pt-6 pb-12">Copyright Fatih Demircan - 2025</div> -->
+        <div class="py-6 text-xs sm:text-sm">© 2025 - Fatih Demircan</div>
     </div>
 </main>
